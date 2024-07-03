@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: app_mir
+    container_name: app
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
-    command: poetry run python volatility/binance_volatility_manager.py # Replace with your actual Python script
+    command: poetry run python src/binance_volatility_manager.py # Replace with your actual Python script
     volumes:
       - .:/opt/app # Mount the current directory into the container's /opt/app
